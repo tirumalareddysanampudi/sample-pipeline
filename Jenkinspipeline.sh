@@ -19,6 +19,12 @@ stages{
   sh "mvn package"
   }
  }
+  stage('MVN-Deploy'){
+  steps{
+   sudo su -
+  sh "cp /root/.jenkins/workspace/pipeline-project-sample/target/samplepipeline-1.0.jar  /opt/apache-tomcat-9/webapps/"
+  }
+ }
 
 }
 }
