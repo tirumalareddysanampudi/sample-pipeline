@@ -1,7 +1,8 @@
 pipeline{
  agent any
  environment{
-   PATH=$MAVEN_PATH/bin:$PATH
+   PATH="$JAVA_HOME/bin:$PATH"
+   PATH="$MAVEN_PATH/bin:$PATH"
  }
 stages{
  stage('Git-Clone'){
