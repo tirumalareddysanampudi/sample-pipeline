@@ -21,10 +21,8 @@ stages{
  }
   stage('MVN-Deploy'){
   steps{
-  sh """
-   sudo su -
-   cp /root/.jenkins/workspace/pipeline-project-sample/target/samplepipeline-1.0.jar  /opt/apache-tomcat-9/webapps/
-   """
+  sh "sudo su -"
+  sh " cp /root/.jenkins/workspace/pipeline-project-sample/target/samplepipeline-1.0.jar  /opt/apache-tomcat-9/webapps/ "
   }
  }
 
