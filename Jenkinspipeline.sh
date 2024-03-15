@@ -9,6 +9,11 @@ stages{
         git credentialsId: 'Git-Hub', url: 'https://github.com/tirumalareddysanampudi/sample-pipeline.git'
     }
  }
+ stage('MVN-Clean-Compile'){
+  steps{
+  sh "mvn clean compile"
+  }
+ }
 
 }
 }
